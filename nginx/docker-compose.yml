@@ -10,7 +10,7 @@ services:
     - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
     - ./config/child:/etc/nginx/conf.d:ro # 引入的子配置
     - ./html:/usr/share/nginx/html:ro
-    ports:
+    ports: # 80 以及 443 都有各自的配置，default，ssl
     - "80:80"
     - "443:443"
     environment:
